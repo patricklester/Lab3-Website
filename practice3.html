@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Practice 3 - Password Verification</title>
+</head>
+<body>
+  <h1>Password Verification</h1>
+  <label>Enter Password: <input type="password" id="pass1"></label><br>
+  <label>Re-enter Password: <input type="password" id="pass2"></label><br>
+  <button onclick="checkPassword()">Verify</button>
+
+  <script>
+    function checkPassword() {
+      let p1 = document.getElementById("pass1").value;
+      let p2 = document.getElementById("pass2").value;
+
+      if (p1.length < 8) {
+        alert("Password must be at least 8 characters long");
+      } else if (p1 !== p2) {
+        alert("Passwords do not match");
+      } else {
+        alert("Passwords match");
+      }
+    }
+  </script>
+</body>
+</html>
